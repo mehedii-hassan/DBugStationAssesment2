@@ -1,18 +1,352 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <data>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#141518"
+        tools:context=".MainActivity">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/m"
+            app:layout_constraintBottom_toBottomOf="@+id/llId"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/llId" />
+
+        <LinearLayout
+            android:id="@+id/llId"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:src="@drawable/c" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:src="@drawable/j" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:src="@drawable/a" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:backgroundTint="#404248"
+            android:drawableLeft="@drawable/i"
+            android:padding="5dp"
+            android:text="Export"
+            android:textAllCaps="false"
+            app:layout_constraintBottom_toBottomOf="@+id/llId"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/llId" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glImageTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".07" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glImageBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".55" />
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/s"
+            app:layout_constraintBottom_toTopOf="@+id/glImageBottom"
+            app:layout_constraintTop_toBottomOf="@+id/glImageTop" />
+
+        <LinearLayout
+            android:id="@+id/llId2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:weightSum="6"
+            app:layout_constraintTop_toBottomOf="@+id/glImageBottom">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:padding="4dp"
+                android:text="Basic"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Split"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Camera"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Mask"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Light"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Mask"
+                android:textAlignment="center"
+                android:textAllCaps="false"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glRVTop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".62" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glRVBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".82" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/glBottom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".92" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvId"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginHorizontal="15dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toTopOf="@+id/glRVBottom"
+            app:layout_constraintTop_toBottomOf="@id/glRVTop" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="5dp"
+            android:background="#24262a"
+            app:layout_constraintBottom_toTopOf="@+id/glBottom"
+            app:layout_constraintTop_toBottomOf="@+id/rvId">
+
+
+            <ImageView
+                android:id="@+id/ivBlur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/h"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvBlur"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Blur"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/ivBlur"
+                app:layout_constraintStart_toStartOf="@+id/ivBlur"
+                app:layout_constraintTop_toBottomOf="@+id/ivBlur" />
+
+            <ImageView
+                android:id="@+id/ivStore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/b"
+                app:layout_constraintEnd_toStartOf="@+id/ivOnline"
+                app:layout_constraintStart_toEndOf="@id/ivBlur"
+                app:layout_constraintTop_toTopOf="@+id/ivBlur" />
+
+            <TextView
+                android:id="@+id/tvStore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Store"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/ivStore"
+                app:layout_constraintStart_toStartOf="@+id/ivStore"
+                app:layout_constraintTop_toBottomOf="@+id/ivStore" />
+
+            <ImageView
+                android:id="@+id/ivOnline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/d"
+                app:layout_constraintEnd_toStartOf="@+id/ivColor"
+                app:layout_constraintStart_toEndOf="@id/ivStore"
+                app:layout_constraintTop_toTopOf="@+id/ivStore" />
+
+            <TextView
+                android:id="@+id/tvOnline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Online"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/ivOnline"
+                app:layout_constraintStart_toStartOf="@+id/ivOnline"
+                app:layout_constraintTop_toBottomOf="@+id/ivOnline" />
+
+            <ImageView
+                android:id="@+id/ivColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/k"
+                app:layout_constraintEnd_toStartOf="@+id/ivGradient"
+                app:layout_constraintStart_toEndOf="@id/ivOnline"
+                app:layout_constraintTop_toTopOf="@+id/ivOnline" />
+
+            <TextView
+                android:id="@+id/tvColor"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Color"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/ivColor"
+                app:layout_constraintStart_toStartOf="@+id/ivColor"
+                app:layout_constraintTop_toBottomOf="@+id/ivColor" />
+
+            <ImageView
+                android:id="@+id/ivGradient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/g"
+                app:layout_constraintEnd_toStartOf="@id/ivGallery"
+                app:layout_constraintStart_toEndOf="@+id/ivColor"
+                app:layout_constraintTop_toTopOf="@+id/ivColor" />
+
+            <TextView
+                android:id="@+id/tvGradient"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Gradient"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/ivGradient"
+                app:layout_constraintStart_toStartOf="@+id/ivGradient"
+                app:layout_constraintTop_toBottomOf="@+id/ivGradient" />
+
+            <ImageView
+                android:id="@+id/ivGallery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/f"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/ivGradient"
+                app:layout_constraintTop_toTopOf="@+id/ivGradient" />
+
+            <TextView
+                android:id="@+id/tvGaller"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Galler"
+                android:textColor="@color/white"
+                app:layout_constraintEnd_toEndOf="@+id/ivGallery"
+                app:layout_constraintStart_toStartOf="@+id/ivGallery"
+                app:layout_constraintTop_toBottomOf="@+id/ivGallery" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="15dp"
+            android:src="@drawable/e"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:src="@drawable/group_1000001753"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_margin="15dp"
+            android:src="@drawable/l"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

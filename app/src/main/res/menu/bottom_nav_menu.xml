@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/miBlur"
+        android:icon="@drawable/h"
+        android:title="Blur"></item>
+
+    <item
+        android:id="@+id/miStore"
+        android:icon="@drawable/b"
+        android:title="Store"></item>
+
+    <item
+        android:id="@+id/miOnline"
+        android:icon="@drawable/d"
+        android:title="Online"></item>
+    <item
+        android:id="@+id/miColor"
+        android:icon="@drawable/k"
+        android:title="Color"></item>
+    <item
+        android:id="@+id/miGradient"
+        android:icon="@drawable/g"
+        android:title="Gradient"></item>
+    <item
+        android:id="@+id/miGallery"
+        android:icon="@drawable/f"
+        android:title="Gallery"></item>
+
+</menu>

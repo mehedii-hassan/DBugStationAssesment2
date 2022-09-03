@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/DBugStationAssesment2/app/src/main/res/layout/activity_main.xml" value="0.22447916666666667" />
+        <entry key="..\:/DBugStationAssesment2/app/src/main/res/layout/activity_main.xml" value="0.25" />
+        <entry key="..\:/DBugStationAssesment2/app/src/main/res/layout/row_design.xml" value="0.22447916666666667" />
+        <entry key="..\:/DBugStationAssesment2/app/src/main/res/menu/bottom_nav_menu.xml" value="0.2234375" />
       </map>
     </option>
   </component>
